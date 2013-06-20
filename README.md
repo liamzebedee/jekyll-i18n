@@ -6,6 +6,7 @@ This is currently what needs to be implemented:
 
 # Tutorial
 The basic principle is that we distinguish between three types of content:
+
 1. **translated** — content translated fully for a single language.
 2. **localised** — generic template that has phrases localised
 3. **non-content** — non-translatable or binary data
