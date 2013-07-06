@@ -25,10 +25,23 @@ module Jekyll
 		
 	end
 	
+	# Necessary filter when you need multi-language site variables (e.g. menus)
+	module TranslateFilter
+		
+		def translate(input)
+			I18n.locale = @context.registers[:page]['lang'].intern
+			I18n.t(input.strip)
+		end
+		
+		alias_method :t, :translate
+		
+	end
+	
 	module Convertible
 		alias_method :_read_yaml, :read_yaml
 		
 		# Enhances the original method to extract the language from the extension.
+		# Then adds it as a tag
 		def read_yaml(base, name)
 			rv = _read_yaml(base, name)
 			
@@ -43,6 +56,10 @@ module Jekyll
 				# This is so when we do render_liquid, we don't override the page's lang.
 				data['lang'] = 'und' if not self.is_a? Jekyll::Layout
 			end
+			
+			# Add the language as a tag.
+			data['tags'] ||= []
+			data['tags'] << data['lang']
 			
 			rv
 		end
@@ -102,16 +119,7 @@ module Jekyll
 		end
 	
 	end
-	
-	class Site
-		
-		alias_method :_aggregate_post_info, :aggregate_post_info
-		def aggregate_post_info(post)
-			self.tags[post.data['lang']] << post
-			_aggregate_post_info(post)
-		end
-		
-	end
 end
 
 Liquid::Template.register_tag('t', Jekyll::TranslateTag)
+Liquid::Template.register_filter(Jekyll::TranslateFilter)
