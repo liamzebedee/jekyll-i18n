@@ -66,7 +66,7 @@ module Jekyll
 		
 		alias_method :_render_liquid, :render_liquid
 		
-		def render_liquid(content, payload, info)
+		def render_liquid(content, payload, info, path = nil)
 			info[:registers][:page]['lang'] = data['lang']
 			_render_liquid(content, payload, info)
 		end
