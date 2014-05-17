@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 	s.homepage    = 'http://rubygems.org/gems/jekyll-i18n'
 	s.license     = 'GPL-3'
 	
-	s.add_runtime_dependency 'jekyll', '~> 1.3.1'
+	s.add_runtime_dependency 'jekyll'
 	gem "i18n", "~> 0.6.4"
 	
 	s.files       = ["lib/jekyll-i18n.rb", 'README.md', 'LICENSE']
