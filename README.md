@@ -1,4 +1,4 @@
-**Jekyll i18n** is a plugin that enables simplistic multi-language site designs using Jekyll. It is written by [Liam Z](liamz.co) and licensed under the GPLv3.
+**Jekyll i18n** is a plugin that enables simplistic multi-language site designs using Jekyll. It is written by [Liam Edwards-Playne](liamz.co) and licensed under the GPLv3.
 
 # Install
 > gem install jekyll-i18n
