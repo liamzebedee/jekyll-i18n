@@ -27,7 +27,7 @@ Non-content is simply written to its usual location.
 For the purposes of translating specific phrases, there is a `t` tag and filter made available. Translation files are stored in **\_i18n/LANG.yml** and contains a mapping of keys to translations for a specific language. For example, a file fr.yml for French translations:
 ```
 fr:
-  Quote of the day: "Le citation du jour"
+  Quote of the day: "La citation du jour"
   interesting: intéressant
 ```
 
@@ -38,7 +38,7 @@ In a file with translated content, test.md for example:
 
 The following would be written to /fr/test.html:
 ```
-<h3>Le citation du jour. <small>intéressant!</small></h3>
+<h3>La citation du jour. <small>intéressant!</small></h3>
 ```
 
 ### Variables
