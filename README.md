@@ -2,7 +2,7 @@
 
 **Jekyll i18n** is a plugin that enables simplistic multi-language site designs using Jekyll. It is written by [Liam Edwards-Playne](liamz.co) and licensed under the GPLv3.
 
-**NOTE: I've moved on from actively developing this gem (I transitioned to WordPress :P), but I am happy to accept pull requests should they be submitted**.
+**NOTE: I've moved on from actively developing this gem (I transitioned to WordPress :P), but I am happy to accept pull requests should they be submitted**. Alternatively, you can look at [jekyll-multiple-languages-plugin](https://github.com/screeninteraction/jekyll-multiple-languages-plugin) which may be of use.
 
 # Install
 > gem install jekyll-i18n
