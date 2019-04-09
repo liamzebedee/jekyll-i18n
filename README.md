@@ -7,7 +7,7 @@
 # Install
 > gem install jekyll-i18n
 
-Then add `require 'jekyll-i18n` to `_plugins/ext.rb`.
+Then add `require 'jekyll-i18n'` to `_plugins/ext.rb`.
 
 # Tutorial
 The basic principle is that we distinguish between two types of content:
